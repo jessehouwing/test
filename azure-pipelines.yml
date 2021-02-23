@@ -1,7 +1,6 @@
 jobs:
 - job: Linux
-  pool:
-    vmImage: 'server'
+  pool: 'server'
   steps:
   - task: ManualValidation@8
     timeoutInMinutes: 1440 # task times out in 1 day
