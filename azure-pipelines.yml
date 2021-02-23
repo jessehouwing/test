@@ -5,5 +5,5 @@ jobs:
   - task: ManualIntervention@8
     timeoutInMinutes: 1440
     inputs:
-      emailRecipients: 'jesse.houwing@gmail.com'
       instructions: 'Please validate the build configuration and resume'
+      emailRecipients: 'jesse.houwing@gmail.com'
