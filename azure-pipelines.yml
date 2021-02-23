@@ -2,8 +2,7 @@ jobs:
 - job: 
   pool: 'server'
   steps:
-  - task: ManualIntervention@8
-    timeoutInMinutes: 1440
+  - task: ManualValidation@0
     inputs:
-      instructions: 'Please validate the build configuration and resume'
-      emailRecipients: 'jesse.houwing@gmail.com'
+      notifyUsers: 'jesse.houwing@gmail.com'
+      instructions: 'rstrst'
