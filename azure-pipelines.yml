@@ -2,7 +2,7 @@ jobs:
 - job: 
   pool: 'server'
   steps:
-  - task: ManualValidation@0
+  - task: ManualIntervention@8
     inputs:
       notifyUsers: 'jesse.houwing@gmail.com'
       instructions: 'rstrst'
