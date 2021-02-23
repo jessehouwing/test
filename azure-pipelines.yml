@@ -1,0 +1,10 @@
+jobs:
+- job: Linux
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - task: ManualValidation@8
+    timeoutInMinutes: 1440 # task times out in 1 day
+    inputs:
+      emailRecipients: 'jesse.houwing@gmail.com'
+      instructions: 'Please validate the build configuration and resume'
