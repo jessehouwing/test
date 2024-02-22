@@ -1,0 +1,21 @@
+name: Test workflow template
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+    - shell: cmd
+      id: cmd
+      run: |
+          @chcp 65001>nul
+          echo foo=bar >> %GITHUB_OUTPUT%
+    - shell: cmd
+      env:
+        foo: ${{ steps.cmd.outputs.foo }}
+      run: |
+          @chcp 65001>nul
+          echo %FOO%
